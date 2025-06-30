@@ -24,6 +24,16 @@
             margin-bottom: 20px;
             text-align: center;
         }
+        .kembali-btn{
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: blue;
+            color: #f4f4f4;
+            border-radius: 6px;
+            text-decoration: none;
+
+
+        }
 
         label {
             display: block;
@@ -66,17 +76,7 @@
 <div class="container">
     <h2>Edit Halaman Why Choose Us</h2>
 
-    <a href="{{ route('admin.dashboard') }}" style="
-    display: inline-block
-    padding: 10px 20px;
-        background-color: #7f8c8d;
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-        margin-bottom: 20px;
-    ">
-    kembali ke dashboard
-    </a>
+    <a href="{{ route('admin.dashboard') }}" class="btn-secondary kembali-btn">Kembali ke Dashboard</a>
 
     @if(session('success'))
         <p style="color: green;">{{ session('success') }}</p>

@@ -41,6 +41,20 @@
             gap: 1.5rem;
             align-items: center;
         }
+        .back-btn{
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: blue;
+            color: #f4f4f4;
+            border-radius: 6px;
+            text-decoration: none;
+            /* transition: background-color 0.3ease, transform 0.2ease; */
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
 
         .card img {
             width: 150px;
@@ -101,6 +115,7 @@
 <body>
 
     <h1>Daftar Destinasi Wisata</h1>
+    <a href="{{ route('admin.dashboard') }}" class="btn btn-secondary back-btn">Kembali ke Dashboard</a>
     <a href="{{ route('admin.destinasi.create') }}" class="btn-add">+ Tambah Destinasi</a>
 
     @foreach($destinasi as $item)
